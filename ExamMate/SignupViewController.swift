@@ -1,14 +1,13 @@
 //
-//  ViewController.swift
+//  SignupViewController.swift
 //  ExamMate
 //
-//  Created by Ümit Şimşek on 14.09.2023.
+//  Created by Ümit Şimşek on 16.09.2023.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class SignupViewController: UIViewController {
     private let logoImgView : UIImageView = {
        let imgView = UIImageView()
         let img = UIImage(named: "logo")
@@ -21,7 +20,7 @@ class LoginViewController: UIViewController {
     
     private let loginLabel : UILabel = {
        let lbl = UILabel()
-        lbl.text = "Log In"
+        lbl.text = "Sign Up"
         lbl.textColor = .label
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 20, weight: .medium)
@@ -29,10 +28,32 @@ class LoginViewController: UIViewController {
     }()
     private let secondaryLoginLabel : UILabel = {
        let lbl = UILabel()
-        lbl.text = "Fill in your information to log in.."
+        lbl.text = "Fill in your information to sign up.."
         lbl.textAlignment = .center
         lbl.textColor = .secondaryLabel
         return lbl
+    }()
+    private let usernameTextFieldImgView : UIImageView = {
+       let imgView = UIImageView()
+        imgView.clipsToBounds = true
+        imgView.contentMode = .scaleAspectFit
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(systemName: "person")
+        imgView.tintColor = .systemGray4
+        return imgView
+    }()
+    
+    private let usernameTextField : UITextField = {
+        let txtField = UITextField()
+        txtField.placeholder = "Username"
+        txtField.backgroundColor = .systemGray6
+        txtField.layer.cornerRadius = 5
+        txtField.autocorrectionType = .no
+        txtField.autocapitalizationType = .none
+        txtField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
+        txtField.leftViewMode = .always
+        txtField.translatesAutoresizingMaskIntoConstraints = false
+        return txtField
     }()
     private let emailTextFieldImgView : UIImageView = {
        let imgView = UIImageView()
@@ -101,14 +122,6 @@ class LoginViewController: UIViewController {
         
         return txtField
     }()
-    private let passwordLabel : UILabel = {
-       let lbl = UILabel()
-        lbl.text = "Forgot password?"
-        lbl.textColor = .secondaryLabel
-        lbl.textAlignment = .right
-        lbl.font = .systemFont(ofSize: 16)
-        return lbl
-    }()
     private let signUpButton : UIButton = {
         let btn = UIButton()
         btn.setTitle("Sign Up", for: .normal)
@@ -127,12 +140,12 @@ class LoginViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         view.backgroundColor = .systemBackground
         configViews()
         
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -150,8 +163,16 @@ class LoginViewController: UIViewController {
                                  y: loginLabel.bottom,
                                  width: view.width,
                                    height: 40)
-        emailTextField.frame = CGRect(x: 30,
+        usernameTextField.frame = CGRect(x: 30,
                                       y: secondaryLoginLabel.bottom+20,
+                                      width: view.width-60,
+                                      height: 50)
+        usernameTextFieldImgView.frame = CGRect(x: 10,
+                                             y: 10,
+                                             width: 35,
+                                             height: 30)
+        emailTextField.frame = CGRect(x: 30,
+                                      y: usernameTextField.bottom+20,
                                       width: view.width-60,
                                       height: 50)
         emailTextFieldImgView.frame = CGRect(x: 10,
@@ -170,26 +191,27 @@ class LoginViewController: UIViewController {
                                                    y: 18,
                                                    width: 28,
                                                    height: 18)
-        passwordLabel.frame = CGRect(x: 30,
-                                     y: passwordTextField.bottom+10,
-                                     width: view.width-60,
-                                     height: 40)
+       
         
         signUpButton.frame = CGRect(x: 30,
-                                    y: passwordLabel.bottom+10,
+                                    y: passwordTextField.bottom+20,
                                     width: (view.width-60)/2-3,
                                     height: 50)
         loginButton.frame = CGRect(x: signUpButton.right+7,
-                                    y: passwordLabel.bottom+10,
+                                    y: passwordTextField.bottom+20,
                                     width: (view.width-60)/2-3,
                                     height: 50)
     }
 }
-extension LoginViewController {
+
+extension SignupViewController {
     func configViews(){
         view.addSubview(logoImgView)
         view.addSubview(loginLabel)
         view.addSubview(secondaryLoginLabel)
+        
+        usernameTextField.addSubview(usernameTextFieldImgView)
+        view.addSubview(usernameTextField)
         
         emailTextField.addSubview(emailTextFieldImgView)
         view.addSubview(emailTextField)
@@ -198,7 +220,6 @@ extension LoginViewController {
         passwordTextField.addSubview(passwordTextFieldEyeImgView)
         view.addSubview(passwordTextField)
         
-        view.addSubview(passwordLabel)
         view.addSubview(loginButton)
         view.addSubview(signUpButton)
 
@@ -217,3 +238,4 @@ extension LoginViewController {
         
     }
 }
+

@@ -16,6 +16,7 @@
 		DB19C7E72AB2EA3400AF6F67 /* ExamMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7E62AB2EA3400AF6F67 /* ExamMateUITests.swift */; };
 		DB19C7E92AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7E82AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift */; };
 		DB3D95502AB44B7B00823426 /* Extention+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3D954F2AB44B7B00823426 /* Extention+UIView.swift */; };
+		DB4E31B82AB5B9010054EEBD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DB19C7E62AB2EA3400AF6F67 /* ExamMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMateUITests.swift; sourceTree = "<group>"; };
 		DB19C7E82AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB3D954F2AB44B7B00823426 /* Extention+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIView.swift"; sourceTree = "<group>"; };
+		DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				DB3D954E2AB44B6700823426 /* Extention */,
 				DB19C7C52AB2EA3300AF6F67 /* AppDelegate.swift */,
 				DB19C7C72AB2EA3300AF6F67 /* SceneDelegate.swift */,
+				DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */,
 				DB19C7C92AB2EA3300AF6F67 /* LoginViewController.swift */,
 				DB19C7CE2AB2EA3400AF6F67 /* Assets.xcassets */,
 				DB19C7D02AB2EA3400AF6F67 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				DB19C7CA2AB2EA3300AF6F67 /* LoginViewController.swift in Sources */,
 				DB19C7C62AB2EA3300AF6F67 /* AppDelegate.swift in Sources */,
+				DB4E31B82AB5B9010054EEBD /* SignupViewController.swift in Sources */,
 				DB19C7C82AB2EA3300AF6F67 /* SceneDelegate.swift in Sources */,
 				DB3D95502AB44B7B00823426 /* Extention+UIView.swift in Sources */,
 			);
