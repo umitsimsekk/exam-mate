@@ -7,7 +7,25 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+protocol SignupOutput : AnyObject {
+    var userInfo : User? { get set }
+    func showAlert(title : String, message : String)
+}
+class SignupViewController: UIViewController,SignupOutput {
+    var userInfo: User?
+    
+    let viewModel : SignupViewModel
+    
+    init(viewModel: SignupViewModel) {
+        self.viewModel = viewModel
+        super .init(nibName: nil, bundle: nil)
+        self.viewModel.output = self
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private let logoImgView : UIImageView = {
        let imgView = UIImageView()
         let img = UIImage(named: "logo")
@@ -34,26 +52,33 @@ class SignupViewController: UIViewController {
         return lbl
     }()
     private let usernameTextFieldImgView : UIImageView = {
-       let imgView = UIImageView()
-        imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(systemName: "person")
-        imgView.tintColor = .systemGray4
-        return imgView
+        let imgView = UIImageView()
+         let img = UIImage(systemName: "person")
+         imgView.tintColor = .systemGray4
+         imgView.image = img
+         imgView.clipsToBounds = true
+         imgView.contentMode = .scaleToFill
+         return imgView
     }()
     
     private let usernameTextField : UITextField = {
         let txtField = UITextField()
-        txtField.placeholder = "Username"
-        txtField.backgroundColor = .systemGray6
-        txtField.layer.cornerRadius = 5
-        txtField.autocorrectionType = .no
-        txtField.autocapitalizationType = .none
-        txtField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
-        txtField.leftViewMode = .always
-        txtField.translatesAutoresizingMaskIntoConstraints = false
-        return txtField
+         txtField.placeholder = "Username"
+         txtField.clipsToBounds = true
+         txtField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
+         txtField.leftViewMode = .always
+         
+         txtField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
+         txtField.rightViewMode = .always
+         
+         txtField.layer.cornerRadius = 4
+         txtField.backgroundColor = .systemGray6
+         
+         txtField.autocorrectionType = .no
+         txtField.autocapitalizationType = .none
+         
+         txtField.textContentType = .emailAddress
+         return txtField
     }()
     private let emailTextFieldImgView : UIImageView = {
        let imgView = UIImageView()
@@ -225,9 +250,17 @@ extension SignupViewController {
 
     }
     @objc func didTapSignUpButton() {
-        
+        guard let username = usernameTextField.text, !username.isEmpty,
+              let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty, password.count >= 6 else {
+            self.showAlert(title: "Error!", message: "Fill in your information to sign up")
+            return
+        }
+        userInfo = User(username: username, email: email, password: password)
+        viewModel.createUser()
     }
     @objc func didTapLoginButton() {
+        dismiss(animated: true)
         
     }
     func showAlert(title : String, message : String) {
@@ -238,4 +271,5 @@ extension SignupViewController {
         
     }
 }
+
 

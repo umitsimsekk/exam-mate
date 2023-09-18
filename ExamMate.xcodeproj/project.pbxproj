@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03DCA9A4E41C529872E48E60 /* Pods_ExamMateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA739979CEB27FC2998A4E9 /* Pods_ExamMateTests.framework */; };
+		7B68B55E4F690AB8662F5639 /* Pods_ExamMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2852DA6764F7252B892EC26F /* Pods_ExamMate.framework */; };
+		D5F7B839D3789E9391DE843A /* Pods_ExamMate_ExamMateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EFF2F5B17EE99ABD43A94E /* Pods_ExamMate_ExamMateUITests.framework */; };
 		DB19C7C62AB2EA3300AF6F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7C52AB2EA3300AF6F67 /* AppDelegate.swift */; };
 		DB19C7C82AB2EA3300AF6F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7C72AB2EA3300AF6F67 /* SceneDelegate.swift */; };
 		DB19C7CA2AB2EA3300AF6F67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7C92AB2EA3300AF6F67 /* LoginViewController.swift */; };
@@ -17,6 +20,11 @@
 		DB19C7E92AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB19C7E82AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift */; };
 		DB3D95502AB44B7B00823426 /* Extention+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3D954F2AB44B7B00823426 /* Extention+UIView.swift */; };
 		DB4E31B82AB5B9010054EEBD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */; };
+		DBF9D9F92AB82CAB00E994F2 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9D9F82AB82CAB00E994F2 /* SignupViewModel.swift */; };
+		DBF9D9FB2AB82CEB00E994F2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9D9FA2AB82CEB00E994F2 /* AuthManager.swift */; };
+		DBF9D9FD2AB830E000E994F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9D9FC2AB830E000E994F2 /* User.swift */; };
+		DBF9D9FF2AB84AF100E994F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF9D9FE2AB84AF100E994F2 /* GoogleService-Info.plist */; };
+		DBF9DA012AB8587B00E994F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9DA002AB8587B00E994F2 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EA739979CEB27FC2998A4E9 /* Pods_ExamMateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamMateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12EFF2F5B17EE99ABD43A94E /* Pods_ExamMate_ExamMateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamMate_ExamMateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		178F17D516972B70A62892BC /* Pods-ExamMateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMateTests.release.xcconfig"; path = "Target Support Files/Pods-ExamMateTests/Pods-ExamMateTests.release.xcconfig"; sourceTree = "<group>"; };
+		2852DA6764F7252B892EC26F /* Pods_ExamMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629AC3B5C7BBCCF19474A28A /* Pods-ExamMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMate.debug.xcconfig"; path = "Target Support Files/Pods-ExamMate/Pods-ExamMate.debug.xcconfig"; sourceTree = "<group>"; };
+		7A17B06766789E0B15D6C972 /* Pods-ExamMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMate.release.xcconfig"; path = "Target Support Files/Pods-ExamMate/Pods-ExamMate.release.xcconfig"; sourceTree = "<group>"; };
+		D8733E535BD4F55C0CE6AB91 /* Pods-ExamMate-ExamMateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMate-ExamMateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExamMate-ExamMateUITests/Pods-ExamMate-ExamMateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB19C7C22AB2EA3300AF6F67 /* ExamMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB19C7C52AB2EA3300AF6F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB19C7C72AB2EA3300AF6F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +66,13 @@
 		DB19C7E82AB2EA3400AF6F67 /* ExamMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB3D954F2AB44B7B00823426 /* Extention+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+UIView.swift"; sourceTree = "<group>"; };
 		DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		DBF9D9F82AB82CAB00E994F2 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		DBF9D9FA2AB82CEB00E994F2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		DBF9D9FC2AB830E000E994F2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DBF9D9FE2AB84AF100E994F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBF9DA002AB8587B00E994F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F3B0EE5E7DB67700D17B6F5C /* Pods-ExamMate-ExamMateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMate-ExamMateUITests.release.xcconfig"; path = "Target Support Files/Pods-ExamMate-ExamMateUITests/Pods-ExamMate-ExamMateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FBBC662B9A28A2824C5B82A0 /* Pods-ExamMateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamMateTests.debug.xcconfig"; path = "Target Support Files/Pods-ExamMateTests/Pods-ExamMateTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B68B55E4F690AB8662F5639 /* Pods_ExamMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DCA9A4E41C529872E48E60 /* Pods_ExamMateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F7B839D3789E9391DE843A /* Pods_ExamMate_ExamMateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33760239C6E36CB1908CEEB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2852DA6764F7252B892EC26F /* Pods_ExamMate.framework */,
+				12EFF2F5B17EE99ABD43A94E /* Pods_ExamMate_ExamMateUITests.framework */,
+				0EA739979CEB27FC2998A4E9 /* Pods_ExamMateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB19C7B92AB2EA3300AF6F67 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +120,8 @@
 				DB19C7DB2AB2EA3400AF6F67 /* ExamMateTests */,
 				DB19C7E52AB2EA3400AF6F67 /* ExamMateUITests */,
 				DB19C7C32AB2EA3300AF6F67 /* Products */,
+				EC140479C5F0742943E4D7EB /* Pods */,
+				33760239C6E36CB1908CEEB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +138,15 @@
 		DB19C7C42AB2EA3300AF6F67 /* ExamMate */ = {
 			isa = PBXGroup;
 			children = (
+				DB80A93C2AB82A8800EC709D /* Resources */,
 				DB3D954E2AB44B6700823426 /* Extention */,
-				DB19C7C52AB2EA3300AF6F67 /* AppDelegate.swift */,
-				DB19C7C72AB2EA3300AF6F67 /* SceneDelegate.swift */,
-				DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */,
-				DB19C7C92AB2EA3300AF6F67 /* LoginViewController.swift */,
-				DB19C7CE2AB2EA3400AF6F67 /* Assets.xcassets */,
-				DB19C7D02AB2EA3400AF6F67 /* LaunchScreen.storyboard */,
+				DB80A93B2AB82A8100EC709D /* Constant */,
+				DB80A93E2AB82BD500EC709D /* Manager */,
+				DB80A93A2AB82A5800EC709D /* ViewModel */,
+				DB80A9392AB82A5300EC709D /* View */,
+				DB80A9382AB82A4400EC709D /* Model */,
 				DB19C7D32AB2EA3400AF6F67 /* Info.plist */,
+				DBF9D9FE2AB84AF100E994F2 /* GoogleService-Info.plist */,
 			);
 			path = ExamMate;
 			sourceTree = "<group>";
@@ -138,6 +176,79 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		DB80A9382AB82A4400EC709D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBF9D9FC2AB830E000E994F2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB80A9392AB82A5300EC709D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB80A93D2AB82AB200EC709D /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB80A93A2AB82A5800EC709D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DBF9D9F82AB82CAB00E994F2 /* SignupViewModel.swift */,
+				DBF9DA002AB8587B00E994F2 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB80A93B2AB82A8100EC709D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		DB80A93C2AB82A8800EC709D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB19C7C52AB2EA3300AF6F67 /* AppDelegate.swift */,
+				DB19C7C72AB2EA3300AF6F67 /* SceneDelegate.swift */,
+				DB19C7CE2AB2EA3400AF6F67 /* Assets.xcassets */,
+				DB19C7D02AB2EA3400AF6F67 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB80A93D2AB82AB200EC709D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB4E31B72AB5B9010054EEBD /* SignupViewController.swift */,
+				DB19C7C92AB2EA3300AF6F67 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DB80A93E2AB82BD500EC709D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DBF9D9FA2AB82CEB00E994F2 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EC140479C5F0742943E4D7EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				629AC3B5C7BBCCF19474A28A /* Pods-ExamMate.debug.xcconfig */,
+				7A17B06766789E0B15D6C972 /* Pods-ExamMate.release.xcconfig */,
+				D8733E535BD4F55C0CE6AB91 /* Pods-ExamMate-ExamMateUITests.debug.xcconfig */,
+				F3B0EE5E7DB67700D17B6F5C /* Pods-ExamMate-ExamMateUITests.release.xcconfig */,
+				FBBC662B9A28A2824C5B82A0 /* Pods-ExamMateTests.debug.xcconfig */,
+				178F17D516972B70A62892BC /* Pods-ExamMateTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB19C7EC2AB2EA3400AF6F67 /* Build configuration list for PBXNativeTarget "ExamMate" */;
 			buildPhases = (
+				6A4B585A2F3F75AF3FCBD9B7 /* [CP] Check Pods Manifest.lock */,
 				DB19C7BE2AB2EA3300AF6F67 /* Sources */,
 				DB19C7BF2AB2EA3300AF6F67 /* Frameworks */,
 				DB19C7C02AB2EA3300AF6F67 /* Resources */,
+				164749BA24837F333F377FCC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB19C7EF2AB2EA3400AF6F67 /* Build configuration list for PBXNativeTarget "ExamMateTests" */;
 			buildPhases = (
+				59944B9D203DBB9A7FC998A8 /* [CP] Check Pods Manifest.lock */,
 				DB19C7D42AB2EA3400AF6F67 /* Sources */,
 				DB19C7D52AB2EA3400AF6F67 /* Frameworks */,
 				DB19C7D62AB2EA3400AF6F67 /* Resources */,
@@ -180,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB19C7F22AB2EA3400AF6F67 /* Build configuration list for PBXNativeTarget "ExamMateUITests" */;
 			buildPhases = (
+				0B4A3D5107DA1BAEEB1C8559 /* [CP] Check Pods Manifest.lock */,
 				DB19C7DE2AB2EA3400AF6F67 /* Sources */,
 				DB19C7DF2AB2EA3400AF6F67 /* Frameworks */,
 				DB19C7E02AB2EA3400AF6F67 /* Resources */,
+				26931C82A9017B0A4C395376 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,6 +360,7 @@
 			files = (
 				DB19C7D22AB2EA3400AF6F67 /* LaunchScreen.storyboard in Resources */,
 				DB19C7CF2AB2EA3400AF6F67 /* Assets.xcassets in Resources */,
+				DBF9D9FF2AB84AF100E994F2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,16 +380,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B4A3D5107DA1BAEEB1C8559 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExamMate-ExamMateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		164749BA24837F333F377FCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamMate/Pods-ExamMate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamMate/Pods-ExamMate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExamMate/Pods-ExamMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26931C82A9017B0A4C395376 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamMate-ExamMateUITests/Pods-ExamMate-ExamMateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExamMate-ExamMateUITests/Pods-ExamMate-ExamMateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExamMate-ExamMateUITests/Pods-ExamMate-ExamMateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59944B9D203DBB9A7FC998A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExamMateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A4B585A2F3F75AF3FCBD9B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExamMate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB19C7BE2AB2EA3300AF6F67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DB19C7CA2AB2EA3300AF6F67 /* LoginViewController.swift in Sources */,
+				DBF9D9FB2AB82CEB00E994F2 /* AuthManager.swift in Sources */,
 				DB19C7C62AB2EA3300AF6F67 /* AppDelegate.swift in Sources */,
+				DBF9D9F92AB82CAB00E994F2 /* SignupViewModel.swift in Sources */,
+				DBF9D9FD2AB830E000E994F2 /* User.swift in Sources */,
 				DB4E31B82AB5B9010054EEBD /* SignupViewController.swift in Sources */,
 				DB19C7C82AB2EA3300AF6F67 /* SceneDelegate.swift in Sources */,
 				DB3D95502AB44B7B00823426 /* Extention+UIView.swift in Sources */,
+				DBF9DA012AB8587B00E994F2 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +660,7 @@
 		};
 		DB19C7ED2AB2EA3400AF6F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629AC3B5C7BBCCF19474A28A /* Pods-ExamMate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +687,7 @@
 		};
 		DB19C7EE2AB2EA3400AF6F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A17B06766789E0B15D6C972 /* Pods-ExamMate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +714,7 @@
 		};
 		DB19C7F02AB2EA3400AF6F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBC662B9A28A2824C5B82A0 /* Pods-ExamMateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +734,7 @@
 		};
 		DB19C7F12AB2EA3400AF6F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178F17D516972B70A62892BC /* Pods-ExamMateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +754,7 @@
 		};
 		DB19C7F32AB2EA3400AF6F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8733E535BD4F55C0CE6AB91 /* Pods-ExamMate-ExamMateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +772,7 @@
 		};
 		DB19C7F42AB2EA3400AF6F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B0EE5E7DB67700D17B6F5C /* Pods-ExamMate-ExamMateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

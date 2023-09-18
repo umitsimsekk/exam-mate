@@ -6,9 +6,23 @@
 //
 
 import UIKit
-
-class LoginViewController: UIViewController {
-
+protocol LoginOutput : AnyObject {
+    var user : User? { get set }
+    func showAlert(title : String, message : String)
+}
+class LoginViewController: UIViewController, LoginOutput{
+    var user: User?
+    let viewModel : LoginViewModel
+    
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super .init(nibName: nil, bundle: nil)
+        self.viewModel.output = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private let logoImgView : UIImageView = {
        let imgView = UIImageView()
         let img = UIImage(named: "logo")
@@ -204,10 +218,20 @@ extension LoginViewController {
 
     }
     @objc func didTapSignUpButton() {
-        
+        let authManagerProtocol : AuthManagerProtocol = AuthManager()
+        let viewModel = SignupViewModel(authManagerProtocol: authManagerProtocol)
+        let vc = SignupViewController(viewModel: viewModel)
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.present(vc, animated: true)
     }
     @objc func didTapLoginButton() {
-        
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            self.showAlert(title: "Error!", message: "Fill in your information to sign in")
+            return
+        }
+        user = User(username: "", email: email, password: password)
+        viewModel.signIn()
     }
     func showAlert(title : String, message : String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
